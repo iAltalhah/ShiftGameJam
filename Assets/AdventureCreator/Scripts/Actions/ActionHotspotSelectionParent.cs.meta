@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3a9250a345d5c4a28b848b8193ab74cc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 11896
+  packageName: Adventure Creator
+  packageVersion: 1.86.3
+  assetPath: Assets/AdventureCreator/Scripts/Actions/ActionHotspotSelectionParent.cs
+  uploadId: 919504

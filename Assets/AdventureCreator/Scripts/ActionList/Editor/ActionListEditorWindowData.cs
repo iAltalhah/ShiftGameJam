@@ -1,0 +1,87 @@
+﻿using UnityEngine;
+
+namespace AC
+{
+
+	[System.Serializable]
+	public class ActionListEditorWindowData
+	{
+
+		public bool isLocked;
+		public int targetID;
+		private ActionList _target;
+		public ActionListAsset targetAsset;
+
+
+		public ActionListEditorWindowData ()
+		{
+			isLocked = false;
+			targetID = 0;
+			_target = null;
+			targetAsset = null;
+		}
+
+
+		public ActionListEditorWindowData (ActionList actionList)
+		{
+			targetAsset = null;
+			_target = actionList;
+
+			if (actionList != null)
+			{
+				isLocked = true;
+				targetID = UnityVersionHandler.GetInstanceID(actionList);
+			}
+			else
+			{
+				isLocked = false;
+				targetID = 0;
+			}
+		}
+
+
+		public ActionListEditorWindowData (ActionListAsset actionListAsset)
+		{
+			targetID = 0;
+			_target = null;
+			targetAsset = actionListAsset;
+			isLocked = (actionListAsset != null);
+		}
+
+
+		public ActionList target
+		{
+			get
+			{
+				if (_target != null)
+				{
+					return _target;
+				}
+				if (targetID != 0)
+				{
+					ActionList[] actionLists = UnityVersionHandler.FindObjectsOfType<ActionList> ();
+					foreach (ActionList actionList in actionLists)
+					{
+						if (UnityVersionHandler.GetInstanceID(actionList) == targetID)
+						{
+							_target = actionList;
+							return _target;
+						}
+					}
+				}
+
+				return null;
+			}
+			set
+			{
+				if (value != null)
+				{
+					_target = value;
+					targetID = UnityVersionHandler.GetInstanceID(value);
+				}
+			}
+		}
+
+	}
+
+}
