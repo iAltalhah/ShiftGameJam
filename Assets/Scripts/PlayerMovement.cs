@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using AC;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -33,7 +34,13 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float animationFadeTime = 0.08f;
     [SerializeField] private float attackFadeTime = 0.03f;
-    [SerializeField] private float attackDuration = 0.7f;
+    [SerializeField] private float attackDuration = 1f;
+
+    [SerializeField] private float attackCooldown = 1.2f;
+
+    private float nextAttackTime;
+
+    [SerializeField] GameObject windAttack;
 
     private CharacterController controller;
     private float verticalVelocity;
@@ -185,11 +192,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleAttack()
     {
-        if (attackAction != null && attackAction.action.WasPressedThisFrame())
+        if (attackAction != null
+            && attackAction.action.WasPressedThisFrame()
+            && !isAttacking
+            && Time.time >= nextAttackTime)
         {
             isAttacking = true;
             attackTimer = attackDuration;
 
+            nextAttackTime = Time.time + attackCooldown;
+
+            StartCoroutine(WindAttack());
             PlayAnimation(attackAnimationName, attackFadeTime);
         }
 
@@ -202,6 +215,19 @@ public class PlayerMovement : MonoBehaviour
                 isAttacking = false;
             }
         }
+    }
+
+    IEnumerator WindAttack()
+    {
+        yield return new WaitForSeconds(0.3f);
+
+        windAttack.SetActive(true);
+
+        yield return new WaitForSeconds(0.7f);
+
+        windAttack.SetActive(false);
+
+
     }
 
     private void UpdateMovementAnimation(Vector3 moveDirection, bool isSprinting)
