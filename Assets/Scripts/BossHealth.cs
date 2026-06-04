@@ -1,11 +1,20 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class BossHealth : MonoBehaviour
 {
     [Header("Boss Hearts UI")]
     [SerializeField] private List<Image> bossHearts = new List<Image>();
+
+    [SerializeField] BoxCollider bossCollider;
+    [SerializeField] Animator bossAnimator;
+    [SerializeField] GameObject boss;
+
+    [SerializeField] GameObject endingBox;
+    [SerializeField] NavMeshAgent agent;
 
 
     private int currentHealth;
@@ -69,6 +78,19 @@ public class BossHealth : MonoBehaviour
 
         Debug.Log("Boss died");
 
-        Destroy(gameObject);
+        StartCoroutine(BossDeath());
+
+    }
+
+    IEnumerator BossDeath()
+    {
+        bossCollider.enabled = false;
+        agent.enabled = false;
+        bossAnimator.Play("Death");
+        yield return new WaitForSeconds(5f);
+
+        boss.SetActive(false);
+        endingBox.SetActive(true);
+
     }
 }

@@ -377,7 +377,7 @@ MonoBehaviour:
   canvas: {fileID: 22300000, guid: 1f726887fb8941b4783bb91ae3dc38bf, type: 3}
   canvasAssetKey: 
   canvasID: 0
-  rectTransform: {fileID: 0}
+  rectTransform: {fileID: 22400004, guid: 1f726887fb8941b4783bb91ae3dc38bf, type: 3}
   rectTransformID: 14532472
   uiTransitionType: 1
   uiPositionType: 0
@@ -405,6 +405,7 @@ MonoBehaviour:
   visibleElements:
   - {fileID: -2138578562971623831}
   - {fileID: 2573705177812368271}
+  - {fileID: 3702202893198999227}
   transitionProgress: 0
   appearType: 6
   speechMenuType: 0
@@ -419,6 +420,7 @@ MonoBehaviour:
   elements:
   - {fileID: -2138578562971623831}
   - {fileID: 2573705177812368271}
+  - {fileID: 3702202893198999227}
   spacing: 0
   sizeType: 0
   autoSizeEveryFrame: 0
@@ -458,7 +460,7 @@ MonoBehaviour:
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
-  biggestElementSize: {x: 600, y: 81.00667}
+  biggestElementSize: {x: 0, y: 0}
   rect:
     serializedVersion: 2
     x: 300
@@ -1219,77 +1221,6 @@ MonoBehaviour:
   clickTexture: {fileID: 0}
   allowContinuousClick: 0
   uiSelectableHideStyle: 0
---- !u!114 &-5925765664658309641
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64747f67d47cb4e04a88bea43b7c1cfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: AC::AC.MenuButton
-  ID: 3
-  title: Load
-  slotSize: {x: 16, y: 5}
-  sizeType: 1
-  positionType: 0
-  slotSpacing: 0
-  lineID: 69
-  alternativeInputButton: 
-  font: {fileID: 12800000, guid: c6e3b07edbe7e4f62837dde56356b819, type: 3}
-  fontScaleFactor: 2
-  fontColor: {r: 1, g: 1, b: 1, a: 1}
-  fontHighlightColor: {r: 1, g: 1, b: 1, a: 1}
-  isVisible: 1
-  isClickable: 1
-  orientation: 0
-  gridWidth: 3
-  backgroundTexture: {fileID: 0}
-  singleSlotBackgrounds: 0
-  highlightTexture: {fileID: 2800000, guid: ac2dde689ce194d9a81a41f09e6b56b4, type: 3}
-  hoverSound: {fileID: 0}
-  clickSound: {fileID: 0}
-  changeCursor: 0
-  cursorID: 0
-  linkedUiID: 332646
-  maxAutoWidthFactor: 0.5
-  relativeRect:
-    serializedVersion: 2
-    x: 6
-    y: 159
-    width: 192
-    height: 45
-  relativePosition: {x: 0, y: 0}
-  numSlots: 1
-  uiButton: {fileID: 0}
-  uiPointerState: 0
-  _label: Load
-  hotspotLabel: 
-  hotspotLabelID: -1
-  anchor: 4
-  textEffects: 0
-  outlineSize: 2
-  effectColour: {r: 0, g: 0, b: 0, a: 1}
-  buttonClickType: 1
-  actionList: {fileID: 0}
-  parameterID: -1
-  parameterValue: 0
-  doFade: 0
-  switchMenuTitle: Load
-  inventoryBoxTitle: 
-  shiftInventory: 0
-  shiftAmount: 1
-  onlyShowWhenEffective: 0
-  loopJournal: 0
-  inputAxis: 
-  simulateInput: 0
-  simulateValue: 1
-  clickTexture: {fileID: 0}
-  allowContinuousClick: 0
-  uiSelectableHideStyle: 0
 --- !u!114 &-5796795536342496743
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1685,77 +1616,6 @@ MonoBehaviour:
   parameterValue: 0
   doFade: 0
   switchMenuTitle: Pause
-  inventoryBoxTitle: 
-  shiftInventory: 0
-  shiftAmount: 1
-  onlyShowWhenEffective: 0
-  loopJournal: 0
-  inputAxis: 
-  simulateInput: 0
-  simulateValue: 1
-  clickTexture: {fileID: 0}
-  allowContinuousClick: 0
-  uiSelectableHideStyle: 0
---- !u!114 &-4395169260019164871
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64747f67d47cb4e04a88bea43b7c1cfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: AC::AC.MenuButton
-  ID: 2
-  title: Save
-  slotSize: {x: 16, y: 5}
-  sizeType: 1
-  positionType: 0
-  slotSpacing: 0
-  lineID: 68
-  alternativeInputButton: 
-  font: {fileID: 12800000, guid: c6e3b07edbe7e4f62837dde56356b819, type: 3}
-  fontScaleFactor: 2
-  fontColor: {r: 1, g: 1, b: 1, a: 1}
-  fontHighlightColor: {r: 1, g: 1, b: 1, a: 1}
-  isVisible: 1
-  isClickable: 1
-  orientation: 0
-  gridWidth: 3
-  backgroundTexture: {fileID: 0}
-  singleSlotBackgrounds: 0
-  highlightTexture: {fileID: 2800000, guid: ac2dde689ce194d9a81a41f09e6b56b4, type: 3}
-  hoverSound: {fileID: 0}
-  clickSound: {fileID: 0}
-  changeCursor: 0
-  cursorID: 0
-  linkedUiID: 329416
-  maxAutoWidthFactor: 0.5
-  relativeRect:
-    serializedVersion: 2
-    x: 6
-    y: 108
-    width: 192
-    height: 45
-  relativePosition: {x: 0, y: 0}
-  numSlots: 1
-  uiButton: {fileID: 0}
-  uiPointerState: 0
-  _label: Save
-  hotspotLabel: 
-  hotspotLabelID: -1
-  anchor: 4
-  textEffects: 0
-  outlineSize: 2
-  effectColour: {r: 0, g: 0, b: 0, a: 1}
-  buttonClickType: 1
-  actionList: {fileID: 0}
-  parameterID: -1
-  parameterValue: 0
-  doFade: 0
-  switchMenuTitle: Save
   inventoryBoxTitle: 
   shiftInventory: 0
   shiftAmount: 1
@@ -3651,14 +3511,14 @@ MonoBehaviour:
   globalDepth: 0
   pauseTexture: {fileID: 0}
   scaleTextEffects: 0
-  keyboardControlWhenPaused: 1
+  keyboardControlWhenPaused: 0
   keyboardControlWhenCutscene: 0
-  keyboardControlWhenDialogOptions: 1
+  keyboardControlWhenDialogOptions: 0
   autoSelectValidRaycasts: 0
   horizontalInputAxis: Horizontal
   verticalInputAxis: Vertical
   useAddressables: 0
-  hasUpgraded: 0
+  hasUpgraded: 1
   doWindowsPreviewFix: 1
   drawOutlines: 0
   drawInEditor: 1
@@ -4750,7 +4610,7 @@ MonoBehaviour:
   canvas: {fileID: 22300000, guid: 507b19cf832ed794f88da9573d2bee92, type: 3}
   canvasAssetKey: 
   canvasID: 0
-  rectTransform: {fileID: 0}
+  rectTransform: {fileID: 22459834, guid: 507b19cf832ed794f88da9573d2bee92, type: 3}
   rectTransformID: 310968
   uiTransitionType: 1
   uiPositionType: 0
@@ -4778,8 +4638,8 @@ MonoBehaviour:
   visibleElements:
   - {fileID: 7920031085692183790}
   - {fileID: 5195934329432261738}
-  - {fileID: -4395169260019164871}
-  - {fileID: -5925765664658309641}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 7561259053627528454}
   transitionProgress: 0
   appearType: 0
@@ -4795,8 +4655,6 @@ MonoBehaviour:
   elements:
   - {fileID: 7920031085692183790}
   - {fileID: 5195934329432261738}
-  - {fileID: -4395169260019164871}
-  - {fileID: -5925765664658309641}
   - {fileID: -3960747180959435171}
   - {fileID: 7561259053627528454}
   spacing: 0.5
@@ -5281,6 +5139,70 @@ MonoBehaviour:
   clickTexture: {fileID: 0}
   allowContinuousClick: 0
   uiSelectableHideStyle: 0
+--- !u!114 &3702202893198999227
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611a3370e9fc74eebbb277d7159c4851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AC::AC.MenuGraphic
+  ID: 2
+  title: Graphic
+  slotSize: {x: 10, y: 5}
+  sizeType: 0
+  positionType: 0
+  slotSpacing: 0
+  lineID: -1
+  alternativeInputButton: 
+  font: {fileID: 0}
+  fontScaleFactor: 2
+  fontColor: {r: 1, g: 1, b: 1, a: 1}
+  fontHighlightColor: {r: 1, g: 1, b: 1, a: 1}
+  isVisible: 1
+  isClickable: 0
+  orientation: 1
+  gridWidth: 3
+  backgroundTexture: {fileID: 0}
+  singleSlotBackgrounds: 0
+  highlightTexture: {fileID: 0}
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
+  changeCursor: 0
+  cursorID: 0
+  linkedUiID: 184532
+  maxAutoWidthFactor: 0.5
+  relativeRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  relativePosition: {x: 0, y: 0}
+  numSlots: 1
+  uiImage: {fileID: 5838444890839785717, guid: 1f726887fb8941b4783bb91ae3dc38bf, type: 3}
+  graphicType: 1
+  graphic:
+    texture: {fileID: 0}
+    isAnimated: 0
+    numFrames: 1
+    numRows: 1
+    numCols: 1
+    size: 0.015
+    animSpeed: 4
+    endAnimOnLastFrame: 0
+    skipFirstFrameWhenLooping: 0
+    clickOffset: {x: 0, y: 0}
+    frameSpeeds: []
+    alwaysAnimate: 0
+  uiRawImage: {fileID: 0}
+  uiImageType: 0
+  linkedJournalElementName: 
+  uiComponentHideStyle: 0
 --- !u!114 &3762321007639773883
 MonoBehaviour:
   m_ObjectHideFlags: 1

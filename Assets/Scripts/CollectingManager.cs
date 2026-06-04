@@ -11,10 +11,12 @@ public class CollectingManager : MonoBehaviour
     [SerializeField] private Variables acVariables;
     [SerializeField] private int cubesCollectedVariableID;
 
+    [SerializeField] AudioSource coin;
+
     public void UpdateCounter()
     {
         counter++;
-
+        coin.Play();
         if (counterText != null)
         {
             counterText.text = counter.ToString();
